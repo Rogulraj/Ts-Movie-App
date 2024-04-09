@@ -1,0 +1,75 @@
+.main_layout {
+  height: 250px;
+  width: 150px;
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  .main_layout {
+    height: 260px;
+    width: 170px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .main_layout {
+    height: 270px;
+    width: 180px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main_layout {
+    height: 280px;
+    width: 190px;
+  }
+}
+
+.image_card {
+  height: 200px;
+  width: 150px;
+}
+@media screen and (min-width: 600px) {
+  .image_card {
+    height: 220px;
+    width: 170px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .image_card {
+    height: 230px;
+    width: 180px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .image_card {
+    height: 240px;
+    width: 190px;
+  }
+}
+
+.movie_image {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.content_card {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.movie_title {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--ffamily);
+  margin: 0px;
+  margin-top: 3px;
+}
+
+.rating_text {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--ffamily);
+  margin: 0px;
+}

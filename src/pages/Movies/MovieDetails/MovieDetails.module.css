@@ -1,0 +1,364 @@
+.main_layout {
+  background-color: var(--black);
+  overflow: hidden;
+}
+
+.sub_layout {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.back_icon_card {
+  height: auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  .back_icon_card {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+}
+
+.back_text {
+  color: var(--light_white);
+  font-family: var(--ffamily);
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.content_card_1 {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+@media screen and (min-width: 600px) {
+  .content_card_1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 25px;
+  }
+}
+
+.image_details_card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 600px) {
+  .image_details_card {
+    order: 1;
+    width: 50%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .image_details_card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+.image_card {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie_image {
+  height: auto;
+  width: 100px;
+  border-radius: 10px;
+}
+@media screen and (min-width: 600px) {
+  .movie_image {
+    height: auto;
+    width: 150px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .movie_image {
+    height: auto;
+    width: 200px;
+  }
+}
+
+.movie_title {
+  color: var(--white);
+  font-size: 25px;
+  font-weight: 800;
+  font-family: var(--ffamily);
+  margin: 0px;
+}
+@media screen and (min-width: 600px) {
+  .movie_title {
+    font-size: 27px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .movie_title {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .movie_title {
+    font-size: 35px;
+  }
+}
+
+.movie_rating {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--ffamily);
+  margin: 0px;
+}
+@media screen and (min-width: 600px) {
+  .movie_rating {
+    font-size: 17px;
+    margin-top: 5px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .movie_rating {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .movie_rating {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+.movie_minute {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--ffamily);
+  margin: 0px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 600px) {
+  .movie_minute {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .movie_minute {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .movie_minute {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+.genre_list_card {
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.movie_genre {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--ffamily);
+  margin: 0px;
+}
+@media screen and (min-width: 600px) {
+  .movie_genre {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .movie_genre {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .movie_genre {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+.release_date {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--ffamily);
+  margin: 0px;
+  margin-top: 5px;
+}
+@media screen and (min-width: 600px) {
+  .release_date {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .release_date {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .release_date {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+.overview_card {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 600px) {
+  .overview_card {
+    order: 3;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.overview_title {
+  color: var(--white);
+  font-size: 23px;
+  font-weight: 700;
+  font-family: var(--ffamily);
+  margin: 0px;
+  margin-top: 30px;
+}
+@media screen and (min-width: 600px) {
+  .overview_title {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .overview_title {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .overview_title {
+    font-size: 30px;
+  }
+}
+
+.overview_paragraph {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--ffamily);
+  margin: 0px;
+}
+@media screen and (min-width: 600px) {
+  .overview_paragraph {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .overview_paragraph {
+    font-size: 17px;
+    margin-top: 7px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .overview_paragraph {
+    font-size: 18px;
+    margin-top: 9px;
+  }
+}
+
+.poster_card {
+  height: auto;
+  width: auto;
+  margin-top: 20px;
+}
+@media screen and (min-width: 600px) {
+  .poster_card {
+    order: 2;
+    height: auto;
+    width: 50%;
+    margin-top: 0px;
+    padding-left: 10px;
+  }
+}
+
+.movie_poster {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+}
+@media screen and (min-width: 600px) {
+  .movie_poster {
+    height: 300px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .movie_poster {
+    height: 350px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .movie_poster {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+.content_card_2 {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cast_list_card {
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 15px;
+}
+@media screen and (min-width: 600px) {
+  .cast_list_card {
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .cast_list_card {
+    gap: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cast_list_card {
+    gap: 100px;
+  }
+}

@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("/Satoshi-Variable.ttf");
+}
+
+:root {
+  --primary_bg: #000000;
+
+  --primary_accent: #404aff;
+  --secondary_accent: #5e66ff;
+  --third_accent: #ffa500;
+
+  --primary_accent_border: #404aff;
+
+  --primary_card_bg: #5e66ff21;
+  --secondary_card_bg: #ebeaea;
+  --third_card_bg: #ff6f0014;
+
+  --primary_border: #cbcbcb;
+  --primary_border_200: #cbcbcb76;
+  --secondary_border: #dddddd;
+
+  --success: #52b963;
+  --danger: #ff0e0e;
+  --white: #ffffff;
+  --black: #000000;
+
+  --light_white: #acabab;
+  --light_black: #424242;
+
+  --light_black_200: #767676;
+
+  --ffamily: "Nunito";
+
+  --constant_white: #ffffff;
+  --constant_black: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

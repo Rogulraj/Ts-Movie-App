@@ -1,0 +1,63 @@
+.button_card {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (min-width: 600px) {
+  .button_card {
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .button_card {
+    gap: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .button_card {
+    gap: 100px;
+  }
+}
+
+.prev_button {
+  height: 40px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-style: none;
+  border-radius: 10px;
+  background-color: var(--secondary_card_bg);
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--ffamily);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.next_button {
+  height: 40px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-style: none;
+  border-radius: 10px;
+  background-color: var(--primary_accent);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--ffamily);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
