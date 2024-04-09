@@ -1,18 +1,28 @@
+// packages
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+
+// components
 import CustomHelmet from "@components/Elements/CustomHelmet/CustomHelmet";
 import PrimaryHeader from "@components/Headers/PrimaryHeader/PrimaryHeader";
 import MaxWidthLayout from "@components/Layout/MaxWidthLayout/MaxWidthLayout";
-import React, { useEffect } from "react";
-
-import defaultStyle from "./Popular.module.css";
-import { useFetchPopularMoviesQuery } from "@services/movie.service";
-import { useAppDispatch, useAppSelector } from "@redux/store";
-import { MovieFeatureActions } from "@redux/features/movie.feature";
 import MovieCard from "@components/Card/MovieCard/MovieCard";
 import Pagination from "@components/Card/Pagination/Pagination";
 import Loader from "@components/Loader/Loader";
-import { useNavigate } from "react-router-dom";
+
+// services
+import { useFetchPopularMoviesQuery } from "@services/movie.service";
+
+// redux
+import { useAppDispatch, useAppSelector } from "@redux/store";
+import { MovieFeatureActions } from "@redux/features/movie.feature";
+
+// route path
 import routePaths from "@constants/routePaths";
-import { toast } from "react-toastify";
+
+// css
+import defaultStyle from "./Popular.module.css";
 
 const Popular = (): React.ReactElement => {
   const dispatch = useAppDispatch();

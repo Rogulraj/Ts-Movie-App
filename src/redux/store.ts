@@ -1,3 +1,4 @@
+// redux packages
 import { configureStore } from "@reduxjs/toolkit";
 import { MovieService } from "@services/movie.service";
 import { MovieFeatureReducer } from "./features/movie.feature";

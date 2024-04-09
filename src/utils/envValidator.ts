@@ -1,5 +1,7 @@
+// packages
 import { cleanEnv, str } from "envalid";
 
+// methods
 export function ValidateEnv(): void {
   cleanEnv(import.meta.env, {
     VITE_NODE_ENV: str(),

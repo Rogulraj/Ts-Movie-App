@@ -1,19 +1,30 @@
+// packages
+import React, { useEffect } from "react";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+
+// components
 import MovieCard from "@components/Card/MovieCard/MovieCard";
 import CustomHelmet from "@components/Elements/CustomHelmet/CustomHelmet";
 import PrimaryHeader from "@components/Headers/PrimaryHeader/PrimaryHeader";
 import MaxWidthLayout from "@components/Layout/MaxWidthLayout/MaxWidthLayout";
-import { MovieFeatureActions } from "@redux/features/movie.feature";
-import { useAppDispatch, useAppSelector } from "@redux/store";
-import { useFetchUpcomingMoviesQuery } from "@services/movie.service";
-import React, { useEffect } from "react";
-
-import defaultStyle from "./UpComing.module.css";
 import Pagination from "@components/Card/Pagination/Pagination";
 import Loader from "@components/Loader/Loader";
-import routePaths from "@constants/routePaths";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
+// redux
+import { MovieFeatureActions } from "@redux/features/movie.feature";
+import { useAppDispatch, useAppSelector } from "@redux/store";
+
+// services
+import { useFetchUpcomingMoviesQuery } from "@services/movie.service";
+
+// route path
+import routePaths from "@constants/routePaths";
+
+// css
+import defaultStyle from "./UpComing.module.css";
+
+// react component
 const UpComing = (): React.ReactElement => {
   const dispatch = useAppDispatch();
   const { movieData, currentPageIndex } = useAppSelector(

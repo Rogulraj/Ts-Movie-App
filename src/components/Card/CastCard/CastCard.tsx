@@ -1,14 +1,20 @@
+// packages
 import React from "react";
 
-import defaultStyle from "./CastCard.module.css";
+// config
 import { VITE_API_IMAGE_BASE_URL } from "@config/index";
 
+// css
+import defaultStyle from "./CastCard.module.css";
+
+// interfaces
 interface CastCardProps {
   imageUrl: string;
   name: string;
   character: string;
 }
 
+// react component
 const CastCard = ({
   imageUrl,
   name,

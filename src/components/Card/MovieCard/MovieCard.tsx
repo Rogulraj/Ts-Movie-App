@@ -1,9 +1,13 @@
-import React, { FC } from "react";
+// packages
+import React from "react";
+
+// config
 import { VITE_API_IMAGE_BASE_URL } from "@config/index";
 
+// css
 import defaultStyle from "./MovieCard.module.css";
-import { title } from "process";
 
+// interfaces
 interface MoviCardProps {
   imageUrl: string;
   title: string;
@@ -11,6 +15,7 @@ interface MoviCardProps {
   movieId: number;
 }
 
+// react component
 const MovieCard = ({
   imageUrl,
   movieId,

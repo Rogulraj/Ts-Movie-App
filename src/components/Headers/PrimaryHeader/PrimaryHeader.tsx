@@ -1,44 +1,33 @@
-import React, { useEffect, useRef, useState } from "react";
-
-import defaultStyle from "./PrimaryHeader.module.css";
+// packages
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+
+// react-icons
 import { IoClose } from "react-icons/io5";
 import { LuMenu } from "react-icons/lu";
-import colorTheme from "@constants/colorTheme";
-import routePaths from "@constants/routePaths";
 import { BiSearchAlt2 } from "react-icons/bi";
-import { useFetchSearchedMoviesQuery } from "@services/movie.service";
-import { useAppDispatch, useAppSelector } from "@redux/store";
-import { MovieFeatureActions } from "@redux/features/movie.feature";
-import { fetchSearchMovies } from "@services/search.service";
-import { MovieModel } from "@models/movie.model";
 
+// color theme
+import colorTheme from "@constants/colorTheme";
+
+// route paths
+import routePaths from "@constants/routePaths";
+
+// redux
+import { useAppDispatch } from "@redux/store";
+import { MovieFeatureActions } from "@redux/features/movie.feature";
+
+// css
+import defaultStyle from "./PrimaryHeader.module.css";
+
+// react component
 const PrimaryHeader = () => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
   const searchRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
 
   const dispatch = useAppDispatch();
-  // const { movieData } = useAppSelector((state) => state.movieFeature);
-
-  // const searchHandler = async (): Promise<void> => {
-  //   if (searchRef.current?.value !== undefined) {
-  //     const fetchData = await fetchSearchMovies({
-  //       index: 1,
-  //       search: searchRef.current.value,
-  //     });
-
-  //     if (fetchData.statusCode === 200) {
-  //       dispatch(
-  //         MovieFeatureActions.bulkEditMovieList(fetchData.data as MovieModel),
-  //         MovieFeatureActions.updateSearchValues({
-  //           value: searchRef.current.value,
-  //         })
-  //       );
-  //     }
-  //   }
-  // };
 
   const searchPageNavigation = () => {
     if (searchRef.current?.value !== undefined) {

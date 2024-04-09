@@ -1,20 +1,32 @@
+// packages
 import React, { useCallback, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+// components
 import CustomHelmet from "@components/Elements/CustomHelmet/CustomHelmet";
 import PrimaryHeader from "@components/Headers/PrimaryHeader/PrimaryHeader";
 import MaxWidthLayout from "@components/Layout/MaxWidthLayout/MaxWidthLayout";
-
-import defaultStyle from "./Search.module.css";
-import { MovieFeatureActions } from "@redux/features/movie.feature";
-
-import { useNavigate } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "@redux/store";
 import MovieCard from "@components/Card/MovieCard/MovieCard";
-import routePaths from "@constants/routePaths";
 import Pagination from "@components/Card/Pagination/Pagination";
+
+// redux
+import { MovieFeatureActions } from "@redux/features/movie.feature";
+import { useAppDispatch, useAppSelector } from "@redux/store";
+
+// route path
+import routePaths from "@constants/routePaths";
+
+// services
 import { fetchSearchMovies } from "@services/search.service";
+
+// models
 import { MovieModel } from "@models/movie.model";
 
-const Search = () => {
+// css
+import defaultStyle from "./Search.module.css";
+
+// react component
+const Search = (): React.ReactElement => {
   const dispatch = useAppDispatch();
   const { movieData, currentPageIndex, searchValue } = useAppSelector(
     (state) => state.movieFeature

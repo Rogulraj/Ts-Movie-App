@@ -1,18 +1,30 @@
+// packages
 import React, { useEffect } from "react";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+
+//component
 import MovieCard from "@components/Card/MovieCard/MovieCard";
 import CustomHelmet from "@components/Elements/CustomHelmet/CustomHelmet";
 import PrimaryHeader from "@components/Headers/PrimaryHeader/PrimaryHeader";
 import MaxWidthLayout from "@components/Layout/MaxWidthLayout/MaxWidthLayout";
-import { MovieFeatureActions } from "@redux/features/movie.feature";
-import { useAppDispatch, useAppSelector } from "@redux/store";
-import { useFetchTopRatedMoviesQuery } from "@services/movie.service";
-import defaultStyle from "./TopRated.module.css";
 import Pagination from "@components/Card/Pagination/Pagination";
 import Loader from "@components/Loader/Loader";
-import { useNavigate } from "react-router-dom";
-import routePaths from "@constants/routePaths";
-import { toast } from "react-toastify";
 
+// redux
+import { MovieFeatureActions } from "@redux/features/movie.feature";
+import { useAppDispatch, useAppSelector } from "@redux/store";
+
+// service
+import { useFetchTopRatedMoviesQuery } from "@services/movie.service";
+
+// route path
+import routePaths from "@constants/routePaths";
+
+// css
+import defaultStyle from "./TopRated.module.css";
+
+// react component
 const TopRated = (): React.ReactElement => {
   const dispatch = useAppDispatch();
   const { movieData, currentPageIndex } = useAppSelector(

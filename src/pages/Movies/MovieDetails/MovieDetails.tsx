@@ -1,21 +1,33 @@
+// packages
 import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
-import defaultStyle from "./MovieDetails.module.css";
+// config
+import { VITE_API_IMAGE_BASE_URL } from "@config/index";
+
+// components
 import CustomHelmet from "@components/Elements/CustomHelmet/CustomHelmet";
 import PrimaryHeader from "@components/Headers/PrimaryHeader/PrimaryHeader";
 import MaxWidthLayout from "@components/Layout/MaxWidthLayout/MaxWidthLayout";
-import { VITE_API_IMAGE_BASE_URL } from "@config/index";
+import CastCard from "@components/Card/CastCard/CastCard";
+import Loader from "@components/Loader/Loader";
+
+// services
 import {
   useFetchCreditsDetailsQuery,
   useFetchMovieDetailsQuery,
 } from "@services/movie.service";
-import { useNavigate, useParams } from "react-router-dom";
-import CastCard from "@components/Card/CastCard/CastCard";
-import Loader from "@components/Loader/Loader";
 
+// react-icons
 import { IoArrowBackCircleSharp } from "react-icons/io5";
+
+// color theme
 import colorTheme from "@constants/colorTheme";
 
+// css
+import defaultStyle from "./MovieDetails.module.css";
+
+// react component
 const MovieDetails = (): React.ReactElement => {
   const { id } = useParams();
   const navigate = useNavigate();

@@ -1,5 +1,7 @@
+// packages
 import { cleanEnv, str } from "envalid";
 
+// methods
 const envVars = cleanEnv(import.meta.env, {
   VITE_NODE_ENV: str(),
   VITE_API_BASE_URL: str(),

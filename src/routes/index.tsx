@@ -1,9 +1,12 @@
+// packages
 import React from "react";
 import {
   Navigate,
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
+
+// routes
 import movieRoutes from "@routes/movie.routes";
 
 const AppRoutes = () => {

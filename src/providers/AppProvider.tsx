@@ -1,18 +1,23 @@
-import reduxStore from "@redux/store";
+// packages
 import React from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
-
-import defaultStyle from "./index.module.css";
 import { ToastContainer } from "react-toastify";
 
+// redux
+import reduxStore from "@redux/store";
+
+// css
+import defaultStyle from "./index.module.css";
 import "react-toastify/dist/ReactToastify.css";
 
+// types
 type AppProviderProps = {
   children: React.ReactNode;
 };
 
+// react component
 const AppProvider = ({ children }: AppProviderProps) => {
   return (
     <React.Suspense>

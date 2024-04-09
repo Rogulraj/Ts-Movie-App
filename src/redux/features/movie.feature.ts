@@ -1,5 +1,8 @@
-import { MovieModel } from "@models/movie.model";
+// packages
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+
+// models
+import { MovieModel } from "@models/movie.model";
 
 export interface MovieState {
   movieData: MovieModel;

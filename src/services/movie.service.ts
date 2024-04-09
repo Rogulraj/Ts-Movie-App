@@ -1,15 +1,18 @@
+// packages
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { PaginationIndex, SearchWithPagination } from "@models/index";
 
+// models
+import { PaginationIndex } from "@models/index";
+import { MovieModel } from "@models/movie.model";
+import { MovieDetailsModel, MovieId } from "@models/movieDetails.model";
+import { CreditsDetailModel } from "@models/cast.model";
+
+// config
 import {
   VITE_API_ACCESS_TOKEN,
   VITE_API_BASE_URL,
   VITE_API_KEY,
 } from "@config/index";
-import { MovieModel } from "@models/movie.model";
-import { MovieDetailsModel, MovieId } from "@models/movieDetails.model";
-import { url } from "inspector";
-import { CreditsDetailModel } from "@models/cast.model";
 
 export const MovieService = createApi({
   reducerPath: "movie-api",

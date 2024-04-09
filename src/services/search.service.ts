@@ -1,11 +1,16 @@
+// packages
+import axios, { AxiosResponse } from "axios";
+
+// config
 import {
   VITE_API_ACCESS_TOKEN,
   VITE_API_BASE_URL,
   VITE_API_KEY,
 } from "@config/index";
+
+//models
 import { SearchWithPagination } from "@models/index";
 import { MovieModel } from "@models/movie.model";
-import axios, { AxiosResponse } from "axios";
 
 export const fetchSearchMovies = async ({
   search,

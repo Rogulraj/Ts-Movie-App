@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+# Movie App README
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Movie App!
 
-Currently, two official plugins are available:
+This project is a web application developed using TypeScript and React, allowing users to browse popular, top-rated, and upcoming movies. Additionally, users can view detailed information about each movie by clicking on them. The app relies on The Movie DB API for fetching movie data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+- TypeScript
+- React
+- Redux (for state management)
+- @reduxjs/toolkit (for creating and maintaining APIs)
+- The Movie DB API (for movie data)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Browse popular movies
+- Explore top-rated movies
+- Discover upcoming movies
+- View detailed information about each movie
+- Seamless integration with The Movie DB API for updated and accurate movie data
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Setup Instructions
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies by running `npm install` or `yarn install`.
+4. Obtain an API key from The Movie DB API and replace the placeholder in the code with your API key.
+5. Create a new file named `.env` in the root directory of the project.
+6. Take a look at the `.env.example` for better clarity.
+7. Add the respective env variable values to the `.env` file otherwise `envalid` package throw error in the browser
+8. Start the development server by running `npm start` or `yarn start`.
+9. Open your web browser and navigate to `http://localhost:5173` to view the application.
+
+## Usage
+
+Once the application is running, you can:
+
+- Browse through popular, top-rated, and upcoming movies using the navigation menu.
+- Click on a movie to view detailed information.
+- Enjoy exploring and discovering your favorite movies!
+
+Happy movie browsing! 🎬🍿

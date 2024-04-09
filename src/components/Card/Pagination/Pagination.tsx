@@ -1,17 +1,26 @@
+// packages
 import React from "react";
+
+// redux
 import { MovieFeatureActions } from "@redux/features/movie.feature";
 import { useAppDispatch, useAppSelector } from "@redux/store";
-import { MdKeyboardBackspace } from "react-icons/md";
+
+// react-icons
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
+// css
 import defaultStyle from "./Pagination.module.css";
+
+// color theme
 import colorTheme from "@constants/colorTheme";
 
+// interfaces
 interface PaginationProps {
   totalPage: number;
 }
 
+// react component
 const Pagination = ({ totalPage = 0 }: PaginationProps): React.ReactElement => {
   const { currentPageIndex } = useAppSelector((state) => state.movieFeature);
 
