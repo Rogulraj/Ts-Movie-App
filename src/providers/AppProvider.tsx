@@ -11,6 +11,8 @@ import reduxStore from "@redux/store";
 // css
 import defaultStyle from "./index.module.css";
 import "react-toastify/dist/ReactToastify.css";
+import Loader from "@components/Loader/Loader";
+import { InfinitySpin } from "react-loader-spinner";
 
 // types
 type AppProviderProps = {
@@ -20,7 +22,7 @@ type AppProviderProps = {
 // react component
 const AppProvider = ({ children }: AppProviderProps) => {
   return (
-    <React.Suspense>
+    <React.Suspense fallback={<Loader />}>
       <ErrorBoundary
         FallbackComponent={() => (
           <div className={defaultStyle.error_boundary_card}>
