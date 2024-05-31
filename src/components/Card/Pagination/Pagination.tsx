@@ -1,5 +1,5 @@
 // packages
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 
 // redux
 import { MovieFeatureActions } from "@redux/features/movie.feature";
@@ -25,6 +25,18 @@ const Pagination = ({ totalPage = 0 }: PaginationProps): React.ReactElement => {
   const { currentPageIndex } = useAppSelector((state) => state.movieFeature);
 
   const dispatch = useAppDispatch();
+  console.log(totalPage);
+
+  const paginationRange = useMemo(() => {
+    return Array.from(
+      { length: totalPage - currentPageIndex + 1 },
+      (_, index) => index + 1
+    );
+  }, [currentPageIndex]);
+
+  useEffect(() => {
+    console.log(paginationRange);
+  }, [paginationRange]);
 
   return (
     <div className={defaultStyle.button_card}>
